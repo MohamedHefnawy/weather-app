@@ -22,18 +22,6 @@ function getResults(query) { // pass the result throught a query
     }).then(displatResults);
 }
 
-fetch("https://community-open-weather-map.p.rapidapi.com/weather?q=London%2Cuk&lat=0&lon=0&callback=test&id=2172797&lang=null&units=%22metric%22%20or%20%22imperial%22&mode=xml%2C%20html", {
-    "method": "GET",
-    "headers": {
-        "x-rapidapi-key": "5eb355baf6msh2aa5b11727d40efp15d377jsn1fabacc44237",
-        "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
-    }
-})
-
-.then(weather => {
-    return weather.json();
-}).then(displatResults);
-
 function displatResults(weather) {
     console.log(weather);
     let city = document.querySelector('.location .city');
